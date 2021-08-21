@@ -1,0 +1,32 @@
+#info{
+    position: fixed;
+    left: 40%;
+    top: 15%;
+}
+
+#Utente{
+    position: fixed;
+    left: 40%;
+    top: 30%;
+}
+
+#Medico{
+    position: fixed;
+    left: 60%;
+    top: 30%;
+}
+
+#Farmacista{
+    position: fixed;
+    left: 20%;
+    top: 30%;
+}
+
+#roles{
+    display: none;
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+}

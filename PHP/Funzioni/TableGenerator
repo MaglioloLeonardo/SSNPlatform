@@ -1,0 +1,49 @@
+<table class="table table-bordered" id="<?=$ID_Table?>">
+    <thead>
+        <tr>
+    <?php
+
+    foreach ($columnNames as $nameQuery => $name){
+        ?>
+        <th scope="col"><?=$name?></th>
+    <?php
+    }
+    ?>
+        </tr>
+    </thead>
+
+    <tbody>
+    <?php
+    $result = $GLOBALS["conn"]->query($query);
+    if(!$result){
+        print "Error description: " . $GLOBALS["conn"]->error;
+        die();
+    }
+    $nrow = 1;
+    while($row = $result->fetch_assoc()){
+        ?>
+        <tr>
+            <?php
+            foreach($columnNames as $nameQuery => $name){
+                if($nameQuery == "#"){
+            ?>
+                <td><?=$nrow?></td>
+            <?php
+                }else{
+            ?>
+            <td><?=$row[$nameQuery]?></td>
+                <?php
+                }
+            }
+            ?>
+        </tr>
+        <?php
+        $nrow = $nrow+1;
+    }
+    ?>
+    </tbody>
+</table>
+
+<?php
+
+?>

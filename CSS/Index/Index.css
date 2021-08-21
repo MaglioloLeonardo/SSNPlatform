@@ -1,0 +1,38 @@
+/*COOKIEALERT_____________________*/
+#cookie {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #212529;
+    color: #dee2e6;
+    max-width: 90%;
+    z-index: 1090;
+    font-size: .8rem;
+}
+
+#cookie-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: .6rem 0;
+}
+
+#cookie-content,
+#cookie-ok{
+    padding: 0 .6rem;
+}
+
+#cookie-content{
+    border-right: 1px solid #dee2e6;
+}
+
+#cookie-ok{
+    border: 0;
+    background: none;
+    color: inherit;
+}
+/*________________________________*/
+.centered{
+    text-align: center;
+}
